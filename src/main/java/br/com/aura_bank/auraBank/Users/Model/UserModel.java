@@ -1,6 +1,8 @@
 package br.com.aura_bank.auraBank.Users.Model;
 
 import br.com.aura_bank.auraBank.Aura.Model.AuraModel;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -12,6 +14,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 public class UserModel {
+
     @Id()
     @GeneratedValue(strategy = GenerationType.IDENTITY)// tipo da estrategia de gerar o id
     private Long id;
