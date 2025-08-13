@@ -1,5 +1,6 @@
 package br.com.aura_bank.auraBank.Users.Model;
 
+import br.com.aura_bank.auraBank.Aura.Model.AuraModel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,11 +19,11 @@ public class UserModel {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "group")
+    @Column(name = "user_group")
     private String group;
 
-    @ManyToOne // uma pessoa só pode ter 1 quantidade de aura
-    @JoinColumn(name = "auras_id")// definir na tabela de aura
-    private long id_aura;
+    @OneToOne // uma pessoa só pode ter 1 quantidade de aura
+    @JoinColumn(name = "aura_id")// definir na tabela de aura
+    private AuraModel aura;
 
 }

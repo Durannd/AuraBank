@@ -1,0 +1,2 @@
+ALTER TABLE tb_user
+ADD COLUMN login VARCHAR(255);

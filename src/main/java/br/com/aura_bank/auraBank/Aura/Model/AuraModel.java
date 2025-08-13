@@ -1,9 +1,11 @@
 package br.com.aura_bank.auraBank.Aura.Model;
 
+import br.com.aura_bank.auraBank.Users.Model.UserModel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import java.util.List;
 
 @Entity
 @Table(name = "tb_aura")
@@ -11,9 +13,14 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 public class AuraModel {
-    @OneToMany(mappedBy = "auras")// aura das pessoas
-    private long aura;
+    @OneToOne(mappedBy = "aura")// aura das pessoas
+    private UserModel usuario;
+
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "aura_quantidade")
+    private Long quantidadeAura;
+    
 }
