@@ -1,6 +1,7 @@
 package br.com.aura_bank.auraBank.Users.Model;
 
-import br.com.aura_bank.auraBank.Aura.Model.AuraModel;
+
+import br.com.aura_bank.auraBank.AuraGroup.Model.GroupModel;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
@@ -22,11 +23,12 @@ public class UserModel {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "user_group")
-    private String group;
+    @Column(name = "qtd_aura")
+    private Long qtdAura;
 
-    @OneToOne // uma pessoa só pode ter 1 quantidade de aura
-    @JoinColumn(name = "aura_id")// definir na tabela de aura
-    private AuraModel aura;
+    @ManyToOne
+    @JoinColumn(name = "tb_group_id") // Nome da coluna da chave estrangeira
+    private GroupModel user_group;
+
 
 }
