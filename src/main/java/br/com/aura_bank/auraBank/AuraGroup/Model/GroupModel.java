@@ -1,6 +1,7 @@
 package br.com.aura_bank.auraBank.AuraGroup.Model;
 
 import br.com.aura_bank.auraBank.Users.Model.UserModel;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -24,6 +25,7 @@ public class GroupModel {
     private String nome;
 
     @OneToMany(mappedBy = "user_group")
+    @JsonIgnore
     private List<UserModel> userModelList;
 
 }

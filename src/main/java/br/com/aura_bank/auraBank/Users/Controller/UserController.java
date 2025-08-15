@@ -2,9 +2,7 @@ package br.com.aura_bank.auraBank.Users.Controller;
 
 import br.com.aura_bank.auraBank.Users.Model.UserModel;
 import br.com.aura_bank.auraBank.Users.Service.UserService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -16,16 +14,24 @@ public class UserController {
     UserController(UserService userService) {
         this.userService = userService;
     }
-
-    @GetMapping("/boasVindas")
-    public String boasVindas() {
-        return "Bem Vindo ao Inicio!";
-    }
-
-    @GetMapping("/listar")
+    //list all user
+    @GetMapping("/list")
     public List<UserModel> list() {
         return userService.list();
     }
-
-
+    // add user
+    @PostMapping("/add")
+    public UserModel addUser(@RequestBody UserModel userModel) {
+        return userService.addUser(userModel);
+    }
+    //list by id
+    @GetMapping("/listar/{id}")
+    public UserModel userModel(@PathVariable Long id){
+        return userService.listById(id);
+    }
+    //delete by id
+    @DeleteMapping("delete/{id}")
+    public void delete(@PathVariable Long id){
+        userService.deleteById(id);
+    }
 }
