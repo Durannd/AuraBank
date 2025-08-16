@@ -1,6 +1,6 @@
-package br.com.aura_bank.auraBank.AuraGroup.Model;
+package br.com.aura_bank.auraBank.auragroup.model;
 
-import br.com.aura_bank.auraBank.Users.Model.UserModel;
+import br.com.aura_bank.auraBank.users.model.UserModel;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

@@ -1,9 +1,7 @@
-package br.com.aura_bank.auraBank.Users.Model;
+package br.com.aura_bank.auraBank.users.model;
 
 
-import br.com.aura_bank.auraBank.AuraGroup.Model.GroupModel;
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+import br.com.aura_bank.auraBank.auragroup.model.GroupModel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

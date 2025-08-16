@@ -1,8 +1,7 @@
-package br.com.aura_bank.auraBank.Users.Service;
+package br.com.aura_bank.auraBank.users.service;
 
-import br.com.aura_bank.auraBank.Users.Model.UserModel;
-import br.com.aura_bank.auraBank.Users.Repository.UserRepository;
-import org.apache.catalina.User;
+import br.com.aura_bank.auraBank.users.model.UserModel;
+import br.com.aura_bank.auraBank.users.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

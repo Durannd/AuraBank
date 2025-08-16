@@ -1,7 +1,7 @@
-package br.com.aura_bank.auraBank.Users.Controller;
+package br.com.aura_bank.auraBank.users.controller;
 
-import br.com.aura_bank.auraBank.Users.Model.UserModel;
-import br.com.aura_bank.auraBank.Users.Service.UserService;
+import br.com.aura_bank.auraBank.users.model.UserModel;
+import br.com.aura_bank.auraBank.users.service.UserService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
