@@ -1,7 +1,7 @@
 package br.com.aura_bank.auraBank.users.controller;
 
 import br.com.aura_bank.auraBank.users.dto_mapper.UserDTO;
-import br.com.aura_bank.auraBank.users.model.UserModel;
+
 import br.com.aura_bank.auraBank.users.service.UserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/inicio")
+@CrossOrigin(origins = "*")
 public class UserController {
     UserService userService;
     UserController(UserService userService) {

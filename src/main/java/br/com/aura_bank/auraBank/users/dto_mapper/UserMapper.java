@@ -11,6 +11,8 @@ public class UserMapper {
         userModel.setName(userDTO.getName());
         userModel.setUser_group(userDTO.getUser_group());
         userModel.setQtdAura(userDTO.getQtdAura());
+        userModel.setPassword(userDTO.getPassword());
+        userModel.setLogin(userDTO.getLogin());
         return userModel;
     }
 
@@ -20,6 +22,8 @@ public class UserMapper {
         userDTO.setName(userModel.getName());
         userDTO.setUser_group(userModel.getUser_group());
         userDTO.setQtdAura(userModel.getQtdAura());
+        userDTO.setLogin(userModel.getLogin());
+        userDTO.setPassword(userModel.getPassword());
         return userDTO;
     }
 }

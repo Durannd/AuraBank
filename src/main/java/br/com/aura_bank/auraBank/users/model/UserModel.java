@@ -24,6 +24,12 @@ public class UserModel {
     @Column(name = "qtd_aura")
     private Long qtdAura;
 
+    @Column(name = "login")
+    private String login;
+
+    @Column(name = "password")
+    private String password;
+
     @ManyToOne
     @JoinColumn(name = "tb_group_id") // Nome da coluna da chave estrangeira
     private GroupModel user_group;

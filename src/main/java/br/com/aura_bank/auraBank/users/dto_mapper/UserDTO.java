@@ -13,4 +13,6 @@ public class UserDTO {
     private String name;
     private Long qtdAura;
     private GroupModel user_group;
+    private String login;
+    private String password;
 }
