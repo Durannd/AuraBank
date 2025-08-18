@@ -1,7 +1,7 @@
 package br.com.aura_bank.auraBank.users.model;
 
 
-import br.com.aura_bank.auraBank.auragroup.model.GroupModel;
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -29,10 +29,5 @@ public class UserModel {
 
     @Column(name = "password")
     private String password;
-
-    @ManyToOne
-    @JoinColumn(name = "tb_group_id") // Nome da coluna da chave estrangeira
-    private GroupModel user_group;
-
 
 }

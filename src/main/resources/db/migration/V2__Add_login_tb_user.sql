@@ -1,4 +1,0 @@
-ALTER TABLE tb_user
-ADD COLUMN login VARCHAR(255);
-ALTER TABLE tb_user
-ADD COLUMN password VARCHAR(255);

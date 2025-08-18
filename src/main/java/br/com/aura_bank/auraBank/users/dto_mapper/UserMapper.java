@@ -9,8 +9,8 @@ public class UserMapper {
         UserModel userModel = new UserModel();
         userModel.setId(userDTO.getId());
         userModel.setName(userDTO.getName());
-        userModel.setUser_group(userDTO.getUser_group());
-        userModel.setQtdAura(userDTO.getQtdAura());
+
+        userModel.setQtdAura(userDTO.getQtd_aura());
         userModel.setPassword(userDTO.getPassword());
         userModel.setLogin(userDTO.getLogin());
         return userModel;
@@ -20,8 +20,8 @@ public class UserMapper {
         UserDTO userDTO = new UserDTO();
         userDTO.setId(userModel.getId());
         userDTO.setName(userModel.getName());
-        userDTO.setUser_group(userModel.getUser_group());
-        userDTO.setQtdAura(userModel.getQtdAura());
+
+        userDTO.setQtd_aura(userModel.getQtdAura());
         userDTO.setLogin(userModel.getLogin());
         userDTO.setPassword(userModel.getPassword());
         return userDTO;

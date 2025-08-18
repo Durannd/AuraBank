@@ -26,6 +26,7 @@ public class UserController {
     // add user
     @PostMapping("/add")
     public ResponseEntity<?> addUser(@RequestBody UserDTO userDTO) {
+        System.out.println("Aura recebida: "+userDTO.getQtd_aura());
         UserDTO user= userService.addUser(userDTO);
         return ResponseEntity.ok("Adiconado com sucesso! \n"+user);
     }
